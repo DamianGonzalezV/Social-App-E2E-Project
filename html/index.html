@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&display=swap");
+    </style>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Cairo+Play:wght@200..1000&display=swap");
+    </style>
+    <title>the social app</title>
+  </head>
+  <body>
+    <button class="btn-test"></button>
+    <main class="app">
+      <i class="icon ph-bold ph-user-plus"></i>
+      <h1 class="the-social-app">the social app</h1>
+
+      <!--  Log in section starts -->
+      <section class="log-in">
+        <p>Hi, welcome back!</p>
+        <p class="new-text">
+          New here?
+          <button class="sign-up-button">sign up</button> for free
+        </p>
+
+        <input
+          data-cy="email-input-form"
+          required
+          type="email"
+          name="email"
+          id="email"
+          placeholder="sophie@example.com"
+          value=""
+          required=""
+        />
+        <p data-cy="email-condition" class="email-condition hide">
+          Please add email
+        </p>
+        <input
+          type="password"
+          name="password"
+          id="password"
+          data-cy="password-input-form"
+        />
+        <p class="password-condition">
+          Incorrect password must contain
+          <span class="one-number-span">one number</span>, and be
+          <span class="eight-characters-span">at least eight characters</span>.
+        </p>
+        <button data-cy="sign-in-button" class="sign-in-button">Sign in</button>
+        <hr />
+      </section>
+
+      <!--  Sign up section to be displayed -->
+      <section class="sign-up sign-up-name hide">
+        <label for="username">What's your name? 🎉</label>
+        <input type="text" class="name" />
+        <button class="btn-continue-name">continue</button>
+      </section>
+
+      <p class="terms-text">
+        You acknowledge that you read, and agree, to out
+        <a href="" style="color: #4cc9f0">Terms of service</a> and our
+        <a href="" style="color: #4cc9f0">Privacy Policy</a>.
+      </p>
+      <!-- <a class="tag" href="">@damiangonvel</a> -->
+    </main>
+    <section class="modal-code hide"></section>
+  </body>
+  <script src="script.js"></script>
+</html>
