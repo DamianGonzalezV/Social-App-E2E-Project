@@ -25,10 +25,11 @@ body {
 /* Tests section */
 
 .btn-test {
-  width: 3rem;
-  height: 3rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  border: none;
   border-radius: 100%;
-  background-color: #f8f9fa;
+  background-color: #fefefe;
   position: sticky;
   top: 0;
   left: 0;
@@ -38,13 +39,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-
-  background-color: #f8f9fa;
 }
 
-.cypress-logo {
-  width: 3rem;
-  height: 3rem;
+.ph-bug {
+  font-size: 3rem;
 }
 
 p {
@@ -58,7 +56,7 @@ p {
 
 main {
   height: 95%;
-  width: 70%;
+  width: 80%;
   background-color: #212529;
 
   display: flex;
@@ -105,7 +103,7 @@ input:focus {
 }
 
 button {
-  width: 60%;
+  width: 80%;
   height: 2.5rem;
   border-radius: 0.5rem;
   border: none;
@@ -139,6 +137,12 @@ button {
   width: auto;
   border: none;
   color: #4895ef;
+
+  transition: 0.2s;
+}
+
+.sign-up-button:hover {
+  color: #f72585;
 }
 
 .password-condition,
@@ -153,7 +157,8 @@ button {
   color: #dc2f02;
 }
 
-.sign-in-button:hover {
+.sign-in-button:hover,
+.btn-continue-name:hover {
   background-color: #4895ef;
   transform: scale(1.02);
 }
@@ -279,4 +284,10 @@ main.camera button.camera-flash {
   width: 70%;
   background-color: #212529;
   border-radius: 1rem;
+}
+
+/* Name screen */
+.name-error {
+  font-size: 1rem;
+  margin-bottom: 1rem;
 }

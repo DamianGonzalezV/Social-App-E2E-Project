@@ -11,14 +11,30 @@ document.addEventListener("DOMContentLoaded", () => {
     // Sign up process variables
     const sectionSignUp = document.querySelector(".sign-up");
     const btnSignUpSplash = document.querySelector(".sign-up-button");
+    const sectionName = document.querySelector(".sign-up-name");
+    const btnContinueName = document.querySelector(".btn-continue-name");
+    const sectionBDate = document.querySelector(".sign-up-birthdate");
+    const btnContinueDate = document.querySelector(".btn-continue-date");
 
-    const btnContinueName = document.querySelector(".btnContinueName");
-
+    // Sign up - name screen
     btnSignUpSplash.addEventListener("click", () => {
       sectionLogIn.classList.add("hide");
       sectionSignUp.classList.remove("hide");
       console.log("click sign up");
     });
+
+    btnContinueName.addEventListener("click", () => {
+      // logic to continue
+      console.log(document.querySelector(".name").value);
+      if (document.querySelector(".name").value.length > 0) {
+        sectionName.classList.add("hide");
+        sectionBDate.classList.remove("hide");
+      } else {
+        document.querySelector(".name-error").style.color = "#dc2f02";
+      }
+    });
+
+    // Sign up - birthdate screen
 
     // Log in code
     btnCodeModal.addEventListener("click", () => {

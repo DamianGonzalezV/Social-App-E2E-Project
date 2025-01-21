@@ -14,7 +14,7 @@
     <title>the social app</title>
   </head>
   <body>
-    <button class="btn-test"></button>
+    <button class="btn-test"><i class="ph-duotone ph-bug"></i></button>
     <main class="app">
       <i class="icon ph-bold ph-user-plus"></i>
       <h1 class="the-social-app">the social app</h1>
@@ -59,7 +59,14 @@
       <section class="sign-up sign-up-name hide">
         <label for="username">What's your name? 🎉</label>
         <input type="text" class="name" />
+        <p class="name-error">Name should be at least 1 letter</p>
         <button class="btn-continue-name">continue</button>
+      </section>
+
+      <section class="sign-up sign-up-birthdate hide">
+        <label for="username">Date of birth 🎉</label>
+        <input type="date" class="date" />
+        <button class="btn-continue-date">continue</button>
       </section>
 
       <p class="terms-text">
