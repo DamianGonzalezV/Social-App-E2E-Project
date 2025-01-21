@@ -53,8 +53,13 @@ document.addEventListener("DOMContentLoaded", () => {
       // Verify correct email format
       if (!email.value.match(/^[A-Za-z\._\-0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)) {
         document.querySelector(".email-condition").classList.remove("hide");
-      } else {
+      } else if (
+        email.value.match(/^[A-Za-z\._\-0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/) &&
+        passwordArr.length > 0 &&
+        password.value.length > 7
+      ) {
         document.querySelector(".email-condition").classList.add("hide");
+        window.location.href = "camera.html";
       }
 
       // Password conditions
@@ -67,8 +72,6 @@ document.addEventListener("DOMContentLoaded", () => {
       } else if (password.value.length < 8) {
         document.querySelector(".eight-characters-span").style.color =
           "#dc2f02";
-      } else {
-        window.location.href = "camera.html";
       }
 
       password.addEventListener("keypress", () => {

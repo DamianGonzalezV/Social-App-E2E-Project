@@ -194,6 +194,7 @@ hr {
 
 /* Camera */
 main.camera {
+  margin: auto;
   justify-content: end;
   align-items: center;
 }
