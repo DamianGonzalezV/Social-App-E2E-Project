@@ -14,7 +14,6 @@
     <title>the social app</title>
   </head>
   <body>
-    <button class="btn-test"><i class="ph-duotone ph-bug"></i></button>
     <main class="app">
       <i class="icon ph-bold ph-user-plus"></i>
       <h1 class="the-social-app">the social app</h1>
@@ -57,20 +56,55 @@
 
       <!--  Sign up section to be displayed -->
       <section class="sign-up sign-up-name hide">
-        <label for="username">What's your name? 🎉</label>
-        <input type="text" class="name" />
-        <p class="name-error">Name should be at least 1 letter</p>
-        <button class="btn-continue-name">continue</button>
+        <label for="name" data-cy="name-label">What's your name? 🙌🏼</label>
+        <input type="text" name="name" class="name" data-cy="name-input" />
+        <p class="name-error" data-cy="name-error">
+          Name should be at least 3 letters
+        </p>
+        <button class="btn-continue-name" data-cy="name-continue">
+          continue
+        </button>
       </section>
 
       <section class="sign-up sign-up-birthdate hide">
-        <label for="username">Date of birth 🎉</label>
-        <input type="date" class="date" />
-        <button class="btn-continue-date">continue</button>
+        <label for="date" data-cy="bd-label">Date of birth 🎉</label>
+        <input type="date" name="date" class="birthdate" data-cy="bd-input" />
+        <p class="bd-error hide" data-cy="bd-error">
+          You should be at least 13 years old to continue
+        </p>
+        <button class="btn-continue-date" data-cy="bd-continue">
+          continue
+        </button>
       </section>
 
-      <p class="terms-text">
-        You acknowledge that you read, and agree, to out
+      <section class="sign-up sign-up-username hide">
+        <label for="username" data-cy="username-label">Add a username 👤</label>
+        <input
+          type="text"
+          name="username"
+          class="username"
+          data-cy="username-input"
+        />
+        <button class="btn-continue-username" data-cy="username-continue">
+          continue
+        </button>
+      </section>
+
+      <section class="sign-up sign-up-password hide">
+        <label for="password" data-cy="password-label">Add a password 🔑</label>
+        <input
+          type="password"
+          name="password"
+          class="password"
+          data-cy="password-input"
+        />
+        <button class="btn-continue-password" data-cy="password-continue">
+          continue
+        </button>
+      </section>
+
+      <p class="terms-text" data-cy="terms-text">
+        You acknowledge that you read, and agree, to our
         <a href="" style="color: #4cc9f0">Terms of service</a> and our
         <a href="" style="color: #4cc9f0">Privacy Policy</a>.
       </p>

@@ -1,4 +1,4 @@
-describe("template spec", () => {
+describe("Sign in to camera", () => {
   beforeEach(() => {
     cy.visit("");
     cy.get('[data-cy="email-input-form"]').as("emailInput");

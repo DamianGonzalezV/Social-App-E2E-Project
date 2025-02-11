@@ -15,6 +15,15 @@ document.addEventListener("DOMContentLoaded", () => {
     const btnContinueName = document.querySelector(".btn-continue-name");
     const sectionBDate = document.querySelector(".sign-up-birthdate");
     const btnContinueDate = document.querySelector(".btn-continue-date");
+    const birthdate = document.querySelector(".birthdate");
+    const sectionUsername = document.querySelector(".sign-up-username");
+    const btnContinueUsername = document.querySelector(
+      ".btn-continue-username"
+    );
+    const sectionPassword = document.querySelector(".sign-up-password");
+    const btnContinuePassword = document.querySelector(
+      ".btn-continue-password"
+    );
 
     // Sign up - name screen
     btnSignUpSplash.addEventListener("click", () => {
@@ -26,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
     btnContinueName.addEventListener("click", () => {
       // logic to continue
       console.log(document.querySelector(".name").value);
-      if (document.querySelector(".name").value.length > 0) {
+      if (document.querySelector(".name").value.length > 2) {
         sectionName.classList.add("hide");
         sectionBDate.classList.remove("hide");
       } else {
@@ -35,6 +44,34 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // Sign up - birthdate screen
+
+    btnContinueDate.addEventListener("click", () => {
+      console.log(birthdate.value);
+      const year = birthdate.value.split("-");
+      console.log(year);
+
+      if (year[0] < "2012") {
+        sectionBDate.classList.add("hide");
+        sectionUsername.classList.remove("hide");
+      } else {
+        document.querySelector(".bd-error").classList.remove("hide");
+        document.querySelector(".bd-error").style.color = "#dc2f02";
+      }
+    });
+
+    // As a user I want to add a username
+
+    btnContinueUsername.addEventListener("click", () => {
+      console.log("click username");
+      sectionUsername.classList.add("hide");
+      sectionPassword.classList.remove("hide");
+    });
+
+    // As a user I want to add a password
+
+    btnContinuePassword.addEventListener("click", () => {
+      console.log("click password");
+    });
 
     // Log in code
     btnCodeModal.addEventListener("click", () => {
