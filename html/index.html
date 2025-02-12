@@ -19,11 +19,14 @@
       <h1 class="the-social-app">the social app</h1>
 
       <!--  Log in section starts -->
-      <section class="log-in">
+      <section class="log-in" data-cy="log-in">
         <p>Hi, welcome back!</p>
         <p class="new-text">
           New here?
-          <button class="sign-up-button">sign up</button> for free
+          <button class="sign-up-button" data-cy="sign-up-button">
+            sign up
+          </button>
+          for free
         </p>
 
         <input
@@ -55,7 +58,7 @@
       </section>
 
       <!--  Sign up section to be displayed -->
-      <section class="sign-up sign-up-name hide">
+      <section class="sign-up sign-up-name hide" data-cy="sign-up-name">
         <label for="name" data-cy="name-label">What's your name? 🙌🏼</label>
         <input type="text" name="name" class="name" data-cy="name-input" />
         <p class="name-error" data-cy="name-error">
@@ -66,7 +69,10 @@
         </button>
       </section>
 
-      <section class="sign-up sign-up-birthdate hide">
+      <section
+        class="sign-up sign-up-birthdate hide"
+        data-cy="sign-up-birthdate"
+      >
         <label for="date" data-cy="bd-label">Date of birth 🎉</label>
         <input type="date" name="date" class="birthdate" data-cy="bd-input" />
         <p class="bd-error hide" data-cy="bd-error">

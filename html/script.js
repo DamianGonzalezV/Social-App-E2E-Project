@@ -2,7 +2,6 @@
 
 document.addEventListener("DOMContentLoaded", () => {
   if (window.location.pathname.endsWith("/")) {
-    const btnCodeModal = document.querySelector(".btn-test");
     const email = document.querySelector("#email");
     const password = document.querySelector("#password");
     const btnSignIn = document.querySelector(".sign-in-button");
@@ -74,11 +73,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // Log in code
-    btnCodeModal.addEventListener("click", () => {
-      document.querySelector(".modal-code").classList.toggle("hide");
-      document.querySelector(".app").classList.toggle("hide");
-    });
-
     btnSignIn.addEventListener("click", () => {
       //verify at least one number in password
       const passwordArr = password.value
