@@ -48,10 +48,14 @@
           id="password"
           data-cy="password-input-form"
         />
-        <p class="password-condition">
-          Incorrect password must contain
-          <span class="one-number-span">one number</span>, and be
-          <span class="eight-characters-span">at least eight characters</span>.
+        <p class="password-condition" data-cy="password-condition">
+          Password must contain
+          <span class="one-number-span" data-cy="one-number-span"
+            >one number</span
+          >, and be
+          <span class="eight-characters-span" data-cy="eight-characters-span"
+            >at least eight characters</span
+          >.
         </p>
         <button data-cy="sign-in-button" class="sign-in-button">Sign in</button>
         <hr />
@@ -83,7 +87,7 @@
         </button>
       </section>
 
-      <section class="sign-up sign-up-username hide">
+      <section class="sign-up sign-up-username hide" data-cy="sign-up-username">
         <label for="username" data-cy="username-label">Add a username 👤</label>
         <input
           type="text"

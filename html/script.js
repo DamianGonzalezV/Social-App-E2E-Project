@@ -106,8 +106,9 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       password.addEventListener("keypress", () => {
-        document.querySelector(".one-number-span").style.color = "#fff";
-        document.querySelector(".eight-characters-span").style.color = "#fff";
+        document.querySelector(".one-number-span").style.color = "#dc2f02";
+        document.querySelector(".eight-characters-span").style.color =
+          "#dc2f02";
       });
     });
   } else if (window.location.pathname.endsWith("html/camera.html")) {
